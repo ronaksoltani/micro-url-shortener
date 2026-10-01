@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "micro-url-shortener"
+version = "1.0.0"
+description = "A small FastAPI URL shortener with SQLite click analytics."
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["fastapi>=0.110", "uvicorn[standard]>=0.27", "SQLAlchemy>=2.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["micro_url_shortener*"]
